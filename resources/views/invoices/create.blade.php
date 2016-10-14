@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="row">
-		<div id="invoice" class="col-sm-6 col-sm-offset-3">
+		<div id="invoice" class="col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default" v-cloak>
 				<div class="panel-heading">
 					<div class="clearfix">
@@ -26,20 +26,5 @@
 	<script src="/js/app.js"></script>
 	<script type="text/javascript">
 		Vue.http.headers.common['X-CSRF-TOKEN'] = '{{ csrf_token() }}';
-
-		window._form = {
-			inoice_no: '',
-			client: '',
-			client_address: '',
-			title: '',
-			invoice_date: '',
-			due_date: '',
-			discount: 0,
-			products: [{
-				name: '',
-				price: 0,
-				qty: 1
-			}]
- 		};
 	</script>
 @endpush
